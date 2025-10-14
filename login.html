@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - FashionStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="auth-container">
+        <div id="successMessage" class="success-message"></div>
+        
+        <div class="auth-box">
+            <h1>Đăng Nhập</h1>
+            <form id="loginForm" action="auth/login.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" name="email" placeholder="Nhập tên đăng nhập" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <div class="password-wrapper">
+                        <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" required>
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-auth">Đăng Nhập</button>
+                
+                <div class="auth-links">
+                    <a href="#" onclick="forgotPassword()">Quên mật khẩu?</a>
+                </div>
+            </form>
+            
+            <div class="switch-form">
+                Chưa có tài khoản? <a href="signup.html">Đăng ký ngay</a>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="js/app.js"></script>
+</body>
+</html>

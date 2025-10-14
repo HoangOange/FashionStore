@@ -1,0 +1,263 @@
+/* ===============================
+   STYLE.CSS – FashionStore Main
+   =============================== */
+
+/* Reset */
+:root{
+    --color-header: #2c3e50;
+    --color-bg: #EEEEEE;
+    --color-text:#fff;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg);
+  color: #333;
+}
+
+/* Header */
+header {
+  background: var(--color-header);
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  height:100px;
+  gap:10px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--color-bg);
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size:18px;
+}
+
+.navbar a:hover{
+  color: #f39c12;
+}
+
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap:wrap;
+
+}
+
+.header-right input {
+  padding: 10px 40px;
+  border-radius: 10px;
+
+  border: none;
+  display:flex;
+  
+}
+.auth-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+
+}
+
+.auth-links a {
+  color:var(--color-bg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+  color: #f39c12;
+}
+
+.promotion-image{
+  width:100%;
+  height:auto;
+}
+.image-khuyenmai{
+  width:100%;
+  height:650px;
+  overflow: hidden;       /* cắt ảnh thừa */
+}
+.image-khuyenmai img{
+  width:100%;
+  height:100%;
+  
+}
+
+.category-list {
+  list-style: none;
+}
+
+.category-list li {
+  margin: 10px 0;
+}
+
+.category-list a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.category-list a:hover {
+  color: #f39c12;
+}
+
+/* Product Section */
+.product-section {
+  padding: 40px;
+  background: #fff;
+}
+
+.product-section h2 {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;              /* Ảnh hiển thị theo tỉ lệ gốc */
+  max-height: 300px;         /* Giới hạn chiều cao nếu ảnh quá lớn */
+  object-fit: contain;       /* Hiển thị toàn bộ ảnh mà không cắt */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #fff;    /* Nền trắng nếu ảnh không full khung */
+}
+
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.btn {
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #f39c12;
+}
+
+/* Footer */
+footer {
+  background:#2c3e50;
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: #f39c12;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+.socials a {
+  color: #f39c12;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
