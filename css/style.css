@@ -56,6 +56,7 @@ header {
   font-weight: 500;
   transition: color 0.3s;
   font-size:18px;
+  
 }
 
 .navbar a:hover{
@@ -640,4 +641,63 @@ footer {
     font-family: var(--main-text-font);
     font-weight: bold;
     color: #333;
+}
+/*---- Mega Menu  -----*/
+.dropdown {
+  position: static; 
+    padding-bottom: 20px; 
+  margin-bottom: -20px; 
+  height: 100%;
+
+}
+
+.mega-menu {
+  position: absolute;
+  top:80px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 30px 80px;
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-top: 2px solid #ccc;
+  z-index: 999;
+ 
+}
+.mega-menu.active {
+  transform: translateY(0);
+  pointer-events: auto; 
+}
+
+.dropdown:hover .mega-menu {
+  display: grid;
+}
+
+.mega-column {
+  padding: 0 25px;
+  border-right: 1px solid #eee;
+}
+
+.mega-column:last-child {
+  border-right: none;
+}
+
+.mega-menu h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+}
+
+.mega-menu a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin: 6px 0;
+  transition: color 0.3s;
+}
+
+.mega-menu a:hover {
+  color: #f39c12;
 }
